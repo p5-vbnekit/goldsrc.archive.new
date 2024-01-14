@@ -1,7 +1,7 @@
-boot_camp 
-datacore 
+boot_camp
+datacore
 stalkyard
-outcry 
-rapidcore 
-no_remorse 
-lost_village2 
+outcry
+rapidcore
+no_remorse
+lost_village2

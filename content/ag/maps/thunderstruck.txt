@@ -1,9 +1,9 @@
 ------General Info--------------------------------------------
 
-Date		:  Summer, 2000
+Date            :  Summer, 2000
 Title           :  thunderstruck
 Filename        :  thunderstruck.bsp
-Filesize	:  431kb
+Filesize        :  431kb
 Author          :  chinx
 Author Email    :  chinx@clara.co.uk
 
@@ -20,7 +20,7 @@ How Many Players:  2-10
 ------Map Instructions-----------------------------------------------
 
 Unzip the files in this archive.  Place the file "thunderstruck.bsp" in
-your half-life/valve/maps directory.  
+your half-life/valve/maps directory.
 
 ------Feedback-------------------------------------------------------
 

@@ -1,19 +1,19 @@
 ------General Info--------------------------------------------
 
-Date		:  May 8, 2000
+Date            :  May 8, 2000
 Title           :  >> boot_camp eXtreme <<
 Filename        :  boot_campX.bsp
-Filesize	:  3.5 megs - additional 1 meg for custom skybox
+Filesize        :  3.5 megs - additional 1 meg for custom skybox
 Author          :  [LMS]tommyd
-Author Email    :  tjd159@psu.edu	
+Author Email    :  tjd159@psu.edu
 Author ICQ      :  49471756
-Previous Maps	:  Lantastic2
+Previous Maps   :  Lantastic2
 
 ------Map Desciption-------------------------------------------------
 A refreshing view of the greatest map in existance, namely boot_camp.
 This has been designed with elite-style gameplay - tau jumping, etc.
 I kept the same layout, but injected my own style into the map.  I have
-added a new building near the bridge that houses another long jump.  
+added a new building near the bridge that houses another long jump.
 
 ------Play Information-----------------------------------------------
 
@@ -21,25 +21,25 @@ Deathmatch      :  yes
 Single Player   :  info_player_start exists
 How Many Players:  2-16
 
-Spawn Points	:  23
+Spawn Points    :  23
 
-LongJumpMods	:  3
-health kits	:  12
-HEV packs	:  12
+LongJumpMods    :  3
+health kits :  12
+HEV packs   :  12
 
-9mmARs		:  21
-AR grens	:  17	
-Shotguns	:  7
-Xbows		:  3	
-RPG's		:  3
-Taus		:  2
-Egons		:  1
-Satchels	:  5
-Tripmines	:  3
-Hand Grens	:  2
-Snarks		:  1
-Hornetguns	:  ????  =P
-Mags		:  1
+9mmARs      :  21
+AR grens    :  17
+Shotguns    :  7
+Xbows       :  3
+RPG's       :  3
+Taus        :  2
+Egons       :  1
+Satchels    :  5
+Tripmines   :  3
+Hand Grens  :  2
+Snarks      :  1
+Hornetguns  :  ????  =P
+Mags        :  1
 
 ------Construction---------------------------------------------------
 
@@ -47,10 +47,10 @@ Base            :  from scratch, inspired by original boot_camp
 Editor(s) used  :  WorldCraft 2.1 / Zoner's HL tools 1.6.2
 Time to Complete:  3 months on and off (including 3 weeks playtesting)
 Compile Machine :  Athlon800, 256MB RAM - Great Thanks CRuCiFeR!
-Compile time    :  About 50 minutes (-extra -chop 96 for hlrad) 
+Compile time    :  About 50 minutes (-extra -chop 96 for hlrad)
 Playtest time   :  hours and hours
 Custom Lighting :  Yes
-Custom Tex's	:  No
+Custom Tex's    :  No
 
 ------Map Instructions-----------------------------------------------
 

@@ -17,13 +17,11 @@ Originally created for Op4CTF, this map has received a colored facelift for use 
 
 .::  Thanks to:  ::.
 
-	Valve Software
-	Gearbox Software
-	BulliT and AGCTF
+    Valve Software
+    Gearbox Software
+    BulliT and AGCTF
 
 .::  Other Stuff ::.
 
 agctf_wormhole (c) 2002 Andrew Weldon
 Also see agctf_gauntlet and agctf_omen.
-
-		 

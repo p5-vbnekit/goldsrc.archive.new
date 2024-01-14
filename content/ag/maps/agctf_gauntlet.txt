@@ -17,16 +17,14 @@ Originally created for Op4CTF, this map has received a colored facelift for use 
 
 .::  Thanks to:  ::.
 
-	Valve Software
-	Gearbox Software
-	BulliT and AGCTF
-	Shader Lab (texture source, http://www.shaderlab.com/)
-	Relic25 (textures from r25.wad, http://www.deltatraining.com/relic25/)
-	SuperCrazy (Morning Mountains sky, http://crazymaps.caseynet.com/)
+    Valve Software
+    Gearbox Software
+    BulliT and AGCTF
+    Shader Lab (texture source, http://www.shaderlab.com/)
+    Relic25 (textures from r25.wad, http://www.deltatraining.com/relic25/)
+    SuperCrazy (Morning Mountains sky, http://crazymaps.caseynet.com/)
 
 .::  Other Stuff ::.
 
 agctf_gauntlet (c) 2002 Andrew Weldon
 Also see agctf_wormhole and agctf_omen.
-
-		 
