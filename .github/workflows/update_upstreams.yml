@@ -1,0 +1,136 @@
+on:
+  push:
+    branches: main
+    paths:
+      - ".github/workflows/update_upstreams.yml"
+      - "steamcmd/**"
+  workflow_dispatch: {}
+  schedule: [ cron: "0 0 * * 1" ]
+
+jobs:
+  job-90-linux-steamcmd:
+    runs-on: ubuntu-latest
+    steps:
+      - name: preparing system
+        env: { DEBIAN_FRONTEND: noninteractive }
+        run: |
+          # preparing system
+          sudo apt update --assume-yes
+          sudo apt install --assume-yes apt-utils
+          sudo apt install --assume-yes debconf
+          sudo apt full-upgrade --assume-yes
+          sudo apt install --assume-yes git rsync podman
+      - name: cloning main branch
+        uses: actions/checkout@v4
+        with: { ref: main }
+      - name: generating steamcmd podman image
+        run: |
+          # generating steamcmd podman image
+          mkdir -p .tmp/build_context.podman
+          tar --create --directory steamcmd/app_update.podman . | tar --extract --directory .tmp/build_context.podman
+          mkdir --parents .tmp/build_context.podman/files/usr/local/bin
+          cp steamcmd/app_update.py .tmp/build_context.podman/files/usr/local/bin/entry_point.py
+          podman build --tag app_update.steamcmd.local .tmp/build_context.podman
+      - name: downloading upstream via steamcmd podman image
+        run: |
+          # downloading upstream via steamcmd podman image
+          mkdir --parents .tmp/download
+          podman run --rm --volume "$(pwd)/.tmp/download":/root/.local/share/Steam/steamapps/common/Half-Life -- app_update.steamcmd.local /usr/games/steamcmd 90 -beta beta
+      - name: cloning storage branch
+        uses: actions/checkout@v4
+        with:
+          ref: linux.90.steamcmd.upstreams.storage
+          path: .tmp/storage
+      - name: applying changes
+        working-directory: .tmp/storage
+        run: |
+          # applying changes
+          rsync --delete --archive '${{github.workspace}}/.tmp/download/' content
+          git add --all content
+          if git diff --quiet --exit-code HEAD -- content; then exit 0; else test 1 -eq "$?"; fi
+          git config --local user.email "noreply@example.com"
+          git config --local user.name "autoupdate workflow"
+          git commit --message "autoupdate from upstream via steamcmd"
+      - name: uploading changes
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          branch: linux.90.steamcmd.upstreams.storage
+          directory: .tmp/storage
+          github_token: "${{github.token}}"
+  job-90-windows-steamcmd:
+    runs-on: windows-latest
+    steps:
+      - name: cloning main branch
+        uses: actions/checkout@v4
+        with: { ref: main }
+      - name: downloading upstream via steamcmd
+        run: |
+          # downloading upstream via steamcmd
+          New-Item -ItemType "directory" -Path ".tmp\download"
+          Copy-Item -Path "${{github.workspace}}\steamcmd\steamcmd.exe" -Destination ".tmp\download"
+          python3 steamcmd\app_update.py .tmp\download\steamcmd.exe 90 -beta beta
+      - name: cloning storage branch
+        uses: actions/checkout@v4
+        with:
+          ref: windows.90.steamcmd.upstreams.storage
+          path: .tmp/storage
+      - name: applying changes
+        working-directory: .tmp/storage
+        shell: bash
+        run: |
+          # applying changes
+          git config --local core.autocrlf false
+          rm --force --recursive content
+          mkdir content
+          tar --create --directory='${{github.workspace}}/.tmp/download/steamapps/common/Half-Life' -- . | tar --extract --directory=content
+          git add --all content
+          if git diff --quiet --exit-code HEAD -- content; then exit 0; else test 1 -eq "$?"; fi
+          git config --local user.email "noreply@example.com"
+          git config --local user.name "autoupdate workflow"
+          git commit --message "autoupdate from upstream via steamcmd"
+      - name: uploading changes
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          branch: windows.90.steamcmd.upstreams.storage
+          directory: .tmp/storage
+          github_token: "${{github.token}}"
+  job-agmod-github:
+    runs-on: ubuntu-latest
+    steps:
+      - name: preparing system
+        env: { DEBIAN_FRONTEND: noninteractive }
+        run: |
+          # preparing system
+          sudo apt update --assume-yes
+          sudo apt install --assume-yes apt-utils
+          sudo apt install --assume-yes debconf
+          sudo apt full-upgrade --assume-yes
+          sudo apt install --assume-yes git curl
+      - name: downloading upstream archive from github
+        run: |
+          # downloading upstream archive from github
+          mkdir --parents .tmp/download
+          curl --output .tmp/download/upstream.tar.gz --location https://github.com/martinwebrant/agmod/raw/master/redist/Full/Linux/ag_66.tar.gz
+      - name: cloning storage branch
+        uses: actions/checkout@v4
+        with:
+          ref: agmod.github.upstreams.storage
+          path: .tmp/storage
+      - name: applying changes
+        working-directory: .tmp/storage
+        run: |
+          # applying changes
+          rm --force --recursive content
+          mkdir --parents content/ag
+          tar --extract --file '${{github.workspace}}/.tmp/download/upstream.tar.gz' --directory content/ ag/
+          git add --all content
+          if git diff --quiet --exit-code HEAD -- content; then exit 0; else test 1 -eq "$?"; fi
+          git config --local user.email "noreply@example.com"
+          git config --local user.name "autoupdate workflow"
+          git commit --message "autoupdate from upstream on github"
+      - name: uploading changes
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          branch: agmod.github.upstreams.storage
+          directory: .tmp/storage
+          github_token: "${{github.token}}"
