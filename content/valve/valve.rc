@@ -13,6 +13,7 @@ exec language.cfg
 
 // Setup custom controller
 exec joystick.cfg
+exec controller.cfg
 
 // run a user script file if present
 exec autoexec.cfg
