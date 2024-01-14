@@ -5,7 +5,7 @@ Release Date             : January 25th 2001
 Filename                 : semonz.bsp
 
 Authors                  : Rik Schennink 'Mr. T-rex' r.schennink@chello.nl
-                     
+
 Description              : Half-Life Deathmatch Map
 
 Other DM-levels by author: None
@@ -21,7 +21,7 @@ Difficulty Settings     : No
 New Sounds              : No
 New Graphics            : Yes (Acctually only Planet Halflife Logo)
 Known bugs              : Version 1.0 contained a longjump that was not shown in map this
-			  version fixes that.
+                          version fixes that.
 
 --- Construction ---
 Editor used             : WorldCraft 3.3
