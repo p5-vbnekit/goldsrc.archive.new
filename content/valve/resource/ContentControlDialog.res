@@ -169,4 +169,23 @@
 		"enabled"		"1"
 		"tabPosition"		"0"
 	}
+	"AddonsFolder"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"AddonsFolder"
+		"xpos"		"248"
+		"ypos"		"108"
+		"wide"		"280"
+		"tall"		"24"
+		"autoResize"		"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"5"
+		"labelText"		"#GameUI_AddonsFolder"
+		"textAlignment"		"west"
+		"dulltext"		"0"
+		"brighttext"		"0"
+		"Default"		"0"
+	}
 }

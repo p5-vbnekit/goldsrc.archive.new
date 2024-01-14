@@ -6,7 +6,7 @@
 		"fieldName"		"MapList"
 		"xpos"		"66"
 		"ypos"		"28"
-		"wide"		"174"
+		"wide"		"194"
 		"tall"		"24"
 		"autoResize"		"0"
 		"pinCorner"		"0"
@@ -203,5 +203,24 @@
 		"textAlignment"		"west"
 		"dulltext"		"0"
 		"brighttext"		"0"
+	}
+	"EnableSteamNetworkingCheck"
+	{
+		"ControlName"		"CheckButton"
+		"fieldName"		"EnableSteamNetworkingCheck"
+		"xpos"		"28"
+		"ypos"		"83"
+		"wide"		"320"
+		"tall"		"24"
+		"autoResize"		"0"
+		"pinCorner"		"0"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"		"2"
+		"labelText"		"#Valve_Enable_SteamNetworking"
+		"textAlignment"		"west"
+		"dulltext"		"0"
+		"brighttext"		"0"
+		"Default"		"1"
 	}
 }
