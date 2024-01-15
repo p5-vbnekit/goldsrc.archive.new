@@ -1,14 +1,14 @@
 // overview description file for boot_camp.bsp
 
-global 
+global
 {
-	ZOOM	1.30
-	ORIGIN	-200 	224	-256
-	ROTATED	1
+    ZOOM    1.30
+    ORIGIN  -200 224 -256
+    ROTATED 1
 }
 
-layer 
+layer
 {
-	IMAGE	"overviews/boot_camp.bmp"
-	HEIGHT	-256
+    IMAGE   "overviews/boot_camp.bmp"
+    HEIGHT  -256
 }

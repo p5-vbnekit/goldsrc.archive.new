@@ -1,4 +1,4 @@
-//1152x864 text scheme file
+// 1152x864 text scheme file
 
 // DEFAULT BUTTON TEXT
 SchemeName = "Primary Button Text"
@@ -55,6 +55,3 @@ SchemeName = "Team Info Text"
 FontName = "Arial"
 FontSize = 21
 FontWeight = 0
-
-
-

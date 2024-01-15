@@ -1,14 +1,14 @@
 // overview description file for de_dust.bsp
 
-global 
+global
 {
-	ZOOM	1.20
-	ORIGIN	101 	1071	-192
-	ROTATED	0
+    ZOOM    1.20
+    ORIGIN  101 1071 -192
+    ROTATED 0
 }
 
-layer 
+layer
 {
-	IMAGE	"overviews/de_dust.bmp"
-	HEIGHT	-192
+    IMAGE   "overviews/de_dust.bmp"
+    HEIGHT  -192
 }
