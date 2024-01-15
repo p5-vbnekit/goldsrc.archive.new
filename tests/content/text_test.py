@@ -90,7 +90,11 @@ def module_context(session_context):
         "cstrike/resource/cstrike_english.txt"
     )
 
-    return _make_property_collector(root = _root, files = _files, utf16le_feff = _utf16le_feff)
+    return _make_property_collector(
+        root = _root, files = _files,
+        utf16le_feff = _utf16le_feff,
+        system = session_context.system
+    )
 
 
 def test_type(subtests, module_context):
@@ -119,10 +123,8 @@ def test_encoding(subtests, module_context):
     for _content in module_context.files:
         with subtests.test(path = _content.path):
             try: _encoding = _known.pop(_content.path)
-            except KeyError:
-                _encoding = _content.encoding
-                assert "us-ascii" == _encoding
-            else: assert _encoding == _content.encoding
+            except KeyError: _encoding = "us-ascii"
+            assert _encoding == _content.encoding
             _data = _content.read(decode = False, upstream = False)
             assert _data == _data.decode(_encoding).encode(_encoding)
 
@@ -207,3 +209,29 @@ def test_vdf(subtests, module_context):
             if _local is None: assert _upstream is None
             elif _upstream is None: pytest.skip("parsed as non-vdf in upstream")
             else: assert vdf.dumps(_local) == vdf.dumps(_upstream)
+
+
+def test_endings(subtests, module_context):
+    import re
+
+    _valid = dict(linux = {"\n"}, windows = {"\n", "\r\n"}, darwin = {"\n", "\r", "\r\n"})[module_context.system]
+    _pattern = re.compile("[\n\r]")
+
+    def _make_ending(value: bytes):
+        for _match in _pattern.finditer(value): return value[_match.start():]
+        return None
+
+    for _content in module_context.files:
+        with subtests.test(path = _content.path):
+            _allow_empty_ending = True
+            for _data in _content.read(
+                decode = True, upstream = False
+            ).splitlines(keepends = True):
+                _ending = _make_ending(value = _data)
+                if _ending:
+                    assert _ending in _valid
+                    continue
+                assert _allow_empty_ending
+                _allow_empty_ending = False
+            else: continue
+            assert _data.rstrip(), "trailing empty lines"
