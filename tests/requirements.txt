@@ -1,0 +1,4 @@
+vdf
+pytest
+pytest-subtests
+python-magic

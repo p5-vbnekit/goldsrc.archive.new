@@ -1,0 +1,38 @@
+on: push
+
+permissions: { contents: read }
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-python@v3
+    - uses: actions/checkout@v4
+      with: { path: snapshot }
+    - run: |
+        # installing dependencies
+        export DEBIAN_FRONTEND=noninteractive
+        sudo apt update --assume-yes
+        sudo apt autoremove --assume-yes
+        sudo apt purge --assume-yes '~c'
+        python -m pip install --upgrade pip
+        pip install --upgrade --requirement=snapshot/tests/requirements.txt
+    - run: |
+        # fetching required git history
+        git -C snapshot fetch --unshallow origin HEAD
+    - run: |
+        # executing `pytest`
+        mkdir -p pytest
+        pytest -ra --basetemp=./pytest \
+          --tests.system=windows \
+          --tests.upstream=c9fa01a376fd94ee9cf41c6c9787a6d5c02d27b4 \
+        -- ./snapshot/tests
+    - if: failure()
+      run: |
+        # collecting test-context artifacts
+        sudo tar --create --directory=pytest -- . | xz > test-context.tar.xz
+    - if: failure()
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-context
+        path: test-context.tar.xz
