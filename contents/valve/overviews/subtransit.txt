@@ -1,14 +1,14 @@
 // overview description file for subtransit.bsp
 
-global 
+global
 {
-	ZOOM	2.30
-	ORIGIN	-512 	486	-400
-	ROTATED	0
+    ZOOM    2.30
+    ORIGIN  -512 486 -400
+    ROTATED 0
 }
 
-layer 
+layer
 {
-	IMAGE	"overviews/subtransit.bmp"
-	HEIGHT	-400
+    IMAGE   "overviews/subtransit.bmp"
+    HEIGHT  -400
 }

@@ -1,14 +1,14 @@
 // overview description file for de_cbble.bsp
 
-global 
+global
 {
-	ZOOM	1.23
-	ORIGIN	-959 	312	-256
-	ROTATED	0
+    ZOOM    1.23
+    ORIGIN  -959 312 -256
+    ROTATED 0
 }
 
-layer 
+layer
 {
-	IMAGE	"overviews/de_cbble.bmp"
-	HEIGHT	-256
+    IMAGE   "overviews/de_cbble.bmp"
+    HEIGHT  -256
 }

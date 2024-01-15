@@ -1,14 +1,14 @@
 // overview description file for cs_backalley.bsp
 
-global 
+global
 {
-	ZOOM	2.17
-	ORIGIN	213 	1229	-656
-	ROTATED	0
+    ZOOM    2.17
+    ORIGIN  213 1229 -656
+    ROTATED 0
 }
 
-layer 
+layer
 {
-	IMAGE	"overviews/cs_backalley.bmp"
-	HEIGHT	-656
+    IMAGE   "overviews/cs_backalley.bmp"
+    HEIGHT  -656
 }

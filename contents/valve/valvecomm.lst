@@ -3,7 +3,7 @@
 
 Secure
 {
-	half-life.speakeasy-nyc.hlauth.net:27012
-	half-life.speakeasy-sea.hlauth.net:27012
-	half-life.speakeasy-chi.hlauth.net:27012
+    half-life.speakeasy-nyc.hlauth.net:27012
+    half-life.speakeasy-sea.hlauth.net:27012
+    half-life.speakeasy-chi.hlauth.net:27012
 }

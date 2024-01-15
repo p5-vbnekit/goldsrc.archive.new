@@ -55,6 +55,3 @@ SchemeName = "Team Info Text"
 FontName = "Arial"
 FontSize = 15
 FontWeight = 0
-
-
-

@@ -4,11 +4,11 @@ by Hobbit (hobbit@nodream.net)
 Counter-Terrorists: Prevent Terrorists
 from bombing the computer lab or the fuel
 pipeline control room. Team members must
-defuse any bombs that threaten targeted 
+defuse any bombs that threaten targeted
 areas.
 
 Terrorists: The Terrorist carrying the
-C4 must destroy one of the targets. 
+C4 must destroy one of the targets.
 
-Other Notes: There are 2 targets 
+Other Notes: There are 2 targets
 in this mission.

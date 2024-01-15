@@ -1,5 +1,5 @@
 //
-//the Half-Life team
+// the Half-Life team
 //
 Kelly Bailey
 Ted Backman
@@ -34,7 +34,7 @@ Kate Powell
 Torsten Reinl
 Dave Riller
 Jay Stelly
-Harry Teasley 
+Harry Teasley
 Steve Theodore
 Bill Van Buren
 Douglas R. Wood

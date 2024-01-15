@@ -1,14 +1,14 @@
 // overview description file for cs_havana.bsp
 
-global 
+global
 {
-	ZOOM	1.36
-	ORIGIN	256	56	0
-	ROTATED	1
+    ZOOM    1.36
+    ORIGIN  256 56 0
+    ROTATED 1
 }
 
-layer 
+layer
 {
-	IMAGE	"overviews/cs_havana.bmp"
-	HEIGHT	0
+    IMAGE   "overviews/cs_havana.bmp"
+    HEIGHT  0
 }

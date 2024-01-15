@@ -10,12 +10,10 @@
             color: #FFB000;
             font: normal 16px/20px Verdana, Tahoma, sans-serif;
         }
-
         a {
             color: #FFF;
             text-decoration: underline;
         }
-
         a:hover {
             color: #EEE;
             text-decoration: none;
