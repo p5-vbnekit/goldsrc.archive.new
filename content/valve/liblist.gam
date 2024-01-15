@@ -3,13 +3,18 @@
 //
 
 game "Half-Life"
+
+cldll "1"
+svonly "0"
+secure "1"
+
+gamedll "dlls\hl.dll"
+gamedll_osx "dlls/hl.dylib"
+gamedll_linux "dlls/hl.so"
+
 startmap "c0a0"
 trainmap "t0a0"
 mpentity "info_player_deathmatch"
-gamedll "dlls\hl.dll"
-gamedll_linux "dlls/hl.so"
-gamedll_osx "dlls/hl.dylib"
-secure "1"
-type "singleplayer_only"
-animated_title "1"
+
 hd_background "1"
+animated_title "1"
