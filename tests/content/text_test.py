@@ -105,12 +105,8 @@ def test_encoding(subtests, module_context):
         _collector = dict()
 
         for _encoding, _path in {
-            "utf-16le": module_context.utf16le_feff,
-            "unknown-8bit": (
-                "valve/sound/sentences.txt",
-                "cstrike/manual/manual.htm",
-                "cstrike/sound/sentences.txt"
-            )
+            "utf-8": ("cstrike/manual/manual.htm", ),
+            "utf-16le": module_context.utf16le_feff
         }.items():
             for _path in _path:
                 assert _path not in _collector
@@ -128,7 +124,7 @@ def test_encoding(subtests, module_context):
                 assert "us-ascii" == _encoding
             else: assert _encoding == _content.encoding
             _data = _content.read(decode = False, upstream = False)
-            assert _encoding.startswith("unknown-") or (_data == _data.decode(_encoding).encode(_encoding))
+            assert _data == _data.decode(_encoding).encode(_encoding)
 
     assert not _known, "missing known files"
 
