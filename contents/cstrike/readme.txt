@@ -245,21 +245,21 @@ Changes/Additions:
 - Upgraded de_dust de_cbble, de_vegas, de_aztec, cs_office, cs_siege, & cs_italy
 - Logic used to cycle the map has been changed.  The map will cycle if
   one of three conditions has been met: "mp_timelimit" has been met,
-  "mp_winlimit" rounds have been won by one of the teams, or "mp_maxrounds" 
+  "mp_winlimit" rounds have been won by one of the teams, or "mp_maxrounds"
   have been played.
 - Fixed many cheats
 - Changed logging format to meet the standars @:
   http://www.hlstats.org/logs/
-	Several events have been added to the logs:
-	a) "Begin_Bomb_Defuse_Without_Kit"
-	b) "Begin_Bomb_Defuse_With_Kit"
-	c) "Spawned_With_The_Bomb"
-	d) "Dropped_The_Bomb"
-	e) "Got_The_Bomb"
-	f) "Became_VIP"
-	g) "Escaped_As_VIP"
-	h) "Round_Start"
-	i) "Round_End"
+    Several events have been added to the logs:
+    a) "Begin_Bomb_Defuse_Without_Kit"
+    b) "Begin_Bomb_Defuse_With_Kit"
+    c) "Spawned_With_The_Bomb"
+    d) "Dropped_The_Bomb"
+    e) "Got_The_Bomb"
+    f) "Became_VIP"
+    g) "Escaped_As_VIP"
+    h) "Round_Start"
+    i) "Round_End"
 
 
 Bug Fixes:
@@ -272,7 +272,7 @@ Bug Fixes:
 New/Changed CVARS:
 ------------------
 
-mp_playerid 
+mp_playerid
 Toggles what information players see in the status bar
 0 everyone: players see all names listed in the status bar (with appropriate
 team colors)
@@ -313,7 +313,7 @@ Example: mp_roundtime 1.3   // 78 seconds
 
 
 mp_winlimit
-Will cycle the map after one team reaches this many wins 
+Will cycle the map after one team reaches this many wins
 0 is the default (no win limit)
 
 
@@ -356,7 +356,7 @@ BETA 7.1
 - included missing skies (for cs_arabstreets, de_train)
 - fixed mp_timelimit bug
 - added APC to cs_siege
-- new server variable, "mp_maxrounds X"   {X = maximum number of rounds to be played on a map, 
+- new server variable, "mp_maxrounds X"   {X = maximum number of rounds to be played on a map,
 if X = 0, then maps will rotate based on mp_timelimit}
 - fixed crosshairs {They now expand regardless of lag}
 - fixed player heights {Player's POV is now representative of the third person player model}
@@ -384,7 +384,7 @@ BETA 7.0
 New Commands:
 ------------
 
-setinfo vgui_menus X  
+setinfo vgui_menus X
 {X = 0 or 1,  0 disables VGUI menus, 1 enables VGUI menus}
 (also available through the "Play CS" > "Customize" menu)
 
@@ -424,7 +424,7 @@ BETA 6.5
 - Integrates Valve's rewrite of the HL networking system
 - Added Smoke Grenade
 - Added "Gorilla Warface" player model
-- Redone models for .45 USP, M3,  SG-552, and Colt M4A1 
+- Redone models for .45 USP, M3,  SG-552, and Colt M4A1
 - Added more realistic smoke f/x, and shell ejection
 - Added Valve's Chasecam modes (roam, free, and locked)
 - Integrates Nighthawk's Model Bounds Checker algorithm
@@ -436,36 +436,36 @@ BETA 6.5
 New Map Voting System:
 ---------------------
 
-players type 'listmaps' to see the maps available to vote on, and then they type 
+players type 'listmaps' to see the maps available to vote on, and then they type
 'votemap X'      where X is the corresponding number of the map.
 
-Server admins who want to add new maps must also 
-add an entry into mapcycle.txt,  that allows players 
+Server admins who want to add new maps must also
+add an entry into mapcycle.txt,  that allows players
 to vote on any new maps.
 
 
 New 6.5 Commands:
 -----------------
 
-fastsprites X    
+fastsprites X
 x = 0   : regular transparent smoke grenade sprites
 x = 1   : simple transparent smoke grenade sprites
 x = 2   : VERY simple transparent smoke grenade sprites
 
-max_shells   X         
+max_shells   X
 X = maximum number of shells at one time
 
-max_smokepuffs   X       
+max_smokepuffs   X
 X = max. number of smoke puffs at one time
 
-mp_tkpunish  0/1       
+mp_tkpunish  0/1
 if set to 1, TK'ers will sit out next round
 
-mp_hostagepenalty   X       
-X = max. number of hostages you can kill before the server boots you out... 
+mp_hostagepenalty   X
+X = max. number of hostages you can kill before the server boots you out...
 setting this to 0 will shut off this command
 
-mp_logmessages  0/1   
+mp_logmessages  0/1
 used for server admins to spit out chat messages in their log files
 
 mp_forcechasecam  0/1
@@ -487,7 +487,7 @@ BETA 6.1
 - 120 round limit for the mp5 and tmp
 - prisoners are notified when someone escapes
 - draw games eliminated, now scenario specific
-- new TK 1 round "time-out" penalty 
+- new TK 1 round "time-out" penalty
 
 
 BETA 6.0
@@ -546,7 +546,7 @@ BETA 5.2
 --------
 [1.10.00]
 
-- Fixed crashing bugs 
+- Fixed crashing bugs
 - Implemented a new lower bandwidth chasecam
 - Prevented players from changing name when they're dead
 - Fixed scoreboard not showing 20 players
@@ -575,7 +575,7 @@ Gameplay Changes:
 - C4 can only be planted in bomb delivery zone
 - To defuse a bomb Counter Terrorists must target C4, press and hold the USE key
 - CTs can defuse C4 without a defuse kit in 10 seconds
-- CTs can defuse C4 with a defuse kit in 5 seconds 
+- CTs can defuse C4 with a defuse kit in 5 seconds
 - A progress meter is added showing CTs their progress defusing a bomb
 - A progress meter is added showing Ts their progress planting a bomb (this takes 3 seconds)
 - Defuse kit now an item which can be purchased - Nobody starts with a defuse kit
@@ -686,7 +686,7 @@ NEW Features :
 - Added Night Vision Goggles
 - Added new entity for mappers to use (info_hostage_rescue)
 - Optimized all the models for lower r_speeds!
-- Ability to assign keys to all of the commands from the controls menu  
+- Ability to assign keys to all of the commands from the controls menu
   (courtesy of cannelbrae of Gunman project)
 
 
@@ -695,13 +695,13 @@ BETA 1.2
 --------
 [7.20.99]
 
-- 5 second "molasses period" at the start of all rounds to dissuade rushing tactics 
+- 5 second "molasses period" at the start of all rounds to dissuade rushing tactics
 - kick option added
 - Refined the prices for some of the gunS
-- made the kevlar MUCH more effective (it now covers people's arms) 
+- made the kevlar MUCH more effective (it now covers people's arms)
 - made jumping and shooting MUCH more inaccurate for all the guns
-- added a $16,000 salary cap 
-- tweaked the bonus money awards. 
+- added a $16,000 salary cap
+- tweaked the bonus money awards.
 - tweaked the flashbangs effectiveness
 
 
@@ -728,7 +728,7 @@ BETA 1.0
 [6.19.99]
 Features :
 
-- weapons: usp, glock, shotgun, m4a1, mp5 navy, TMP, awp, G3/SG-1 & FN M249 PARA 
+- weapons: usp, glock, shotgun, m4a1, mp5 navy, TMP, awp, G3/SG-1 & FN M249 PARA
 - hostage rescue scenario
 - custom maps: cs_siege, cs_mansion, cs_wpndepot, cs_prison
 
@@ -738,18 +738,18 @@ Features :
 
 
 
-Counter-Strike is a modification (MOD) to the excellent game, Half-Life. 
-It modifies the multiplayer aspects of Half-Life to bring to it a more team-oriented 
-gameplay. Not terribly unlike Team Fortress 2, Counter-Strike provides the player 
+Counter-Strike is a modification (MOD) to the excellent game, Half-Life.
+It modifies the multiplayer aspects of Half-Life to bring to it a more team-oriented
+gameplay. Not terribly unlike Team Fortress 2, Counter-Strike provides the player
 with an experience that a trained counter-terrorist unit or terrorist unit experiences.
- 
-The MOD is team-based featuring one team playing the role of the terrorist and the other 
-team playing the role of the counter-terrorist. Each side has access to different guns and 
-equipment, as well as different abilities. Maps have have different goals such as: hostage rescue, 
-assassination, bomb defusion, Terrorist escape, etc. 
 
-Weapons include the usual assortment of pistols, shotguns, assault rifles, sniper rifles, grenades, 
-demolition devices. Each side has access to a different subset of weapons so for example only the 
+The MOD is team-based featuring one team playing the role of the terrorist and the other
+team playing the role of the counter-terrorist. Each side has access to different guns and
+equipment, as well as different abilities. Maps have have different goals such as: hostage rescue,
+assassination, bomb defusion, Terrorist escape, etc.
+
+Weapons include the usual assortment of pistols, shotguns, assault rifles, sniper rifles, grenades,
+demolition devices. Each side has access to a different subset of weapons so for example only the
 counter-terrorist can use the M4A1, and only the terrorists can use the AK-47.
 
 We are confident that we've created a MOD quite unlike any other. We hope you will be immersed in
@@ -768,13 +768,13 @@ THE CS TEAM
 
 
 Gooseman
-gooseman@counter-strike.net 
+gooseman@counter-strike.net
 Project leader, Head modeler, Head coder, Head-job
 
 
 
 cliffe
-cliffe@counter-strike.net 
+cliffe@counter-strike.net
 2d-graphics, sound effects, QA, PR, jack of all trades, etc.
 
 
@@ -813,11 +813,11 @@ by Zaphod Beeblebrox
 coyote@eudoramail.com
 
 as_oilrig
-by MacMan 
+by MacMan
 macmaninfi@aol.com
 
 cs_backalley
-by TYR 
+by TYR
 tyr@barking-dog.com
 
 de_aztec
@@ -836,7 +836,7 @@ cs_militia
 by Andrew Aumann
 andrewja@home.com
 
-cs_747 
+cs_747
 by Markus
 witchdawn@hotmail.com
 
@@ -848,8 +848,8 @@ cs_siege
 by N0TH1NG
 N0TH1NG@mailcity.com
 
-cs_assault 
-by CryptR 
+cs_assault
+by CryptR
 lmuur@dlc.fi
 
 de_dust
@@ -880,7 +880,7 @@ Chris Ashton (aka Macman)
 MacManInfi@aol.com
 
 Ido Magal
-ido@dnai.com 
+ido@dnai.com
 
 
 
@@ -907,10 +907,10 @@ Special Thanks:
 Thanks to:
 ----------
 
-Mr_Grim			: for his help in coding the radio system, and other things
-BETA test team	        : for helping us test.. and for providing the occasional premature leak
-Valve Software	        : for their constant support
-Fanny			: for giving Gooseman motivation!
+Mr_Grim         : for his help in coding the radio system, and other things
+BETA test team          : for helping us test.. and for providing the occasional premature leak
+Valve Software          : for their constant support
+Fanny           : for giving Gooseman motivation!
 David "Nighthawk" Flor  : for the Model Bounds Checker algorithm
 Mappers, Texture artists
 
@@ -923,13 +923,13 @@ Programming to mirror the weapons to the right hand
 
 Also thanks to:
 ---------------
-Gabe Newell; Gamespy Industries; Oddjob, Mr. Grim, and Dallas Frank of the A-Team;  
+Gabe Newell; Gamespy Industries; Oddjob, Mr. Grim, and Dallas Frank of the A-Team;
 MTG; Poor Yurik; Brent Bussey; Valve Software; Art Min; Stikky & Adrian @ Gameplay;
-Lestat, BizzyBlaster; D0gzilla; Chris Mair; Barking Dog Studios; Gamefan Network; 
-Mutated Jellyfish; Gameplay.com; Darkman; TeamGT; Justin Bunnell,  Erik Johnston @ Valve; 
+Lestat, BizzyBlaster; D0gzilla; Chris Mair; Barking Dog Studios; Gamefan Network;
+Mutated Jellyfish; Gameplay.com; Darkman; TeamGT; Justin Bunnell,  Erik Johnston @ Valve;
 Leon Hartwig;  shirow @ mod central; Geronimo; RzE; MatteusX; John Jensen; Mr. Fraggle;
 Frank Nuccio; Speakeasy.net;  Yahn Bernier; Macman; Jason Malhavoc Nugent; Redwood; Jcal;
-Stomped.com; Art Min; Tactic; Stem; Darren Tabor; and the CS players. 
+Stomped.com; Art Min; Tactic; Stem; Darren Tabor; and the CS players.
 
 ---------------
 
@@ -979,5 +979,3 @@ http://bot.counter-strike.net/
 
 --readme.txt by cliffe
 e-mail cliffe@counter-strike.net
-
-

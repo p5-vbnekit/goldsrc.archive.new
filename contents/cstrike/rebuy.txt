@@ -16,16 +16,16 @@
 //
 // The categories used by rebuy and what those categories include are:
 //
-// PrimaryWeapon	- Any weapon that goes in weapon slot 1
-// PrimaryAmmo		- Ammo for the weapon currently in weapon slot 1
-// SecondaryWeapon	- Any weapon that goes in weapon slot 2
-// SecondaryAmmo	- Ammo for the weapon currently in weapon slot 2
-// Defuser		- Defuse kit
-// Armor		- Kevlar, Kevlar+Helmet
-// HEGrenade		- HE Grenade
-// Flashbang		- Flashbang
-// SmokeGrenade		- Smoke Grenade
-// NightVision		- Nightvision goggles
+// PrimaryWeapon    - Any weapon that goes in weapon slot 1
+// PrimaryAmmo      - Ammo for the weapon currently in weapon slot 1
+// SecondaryWeapon  - Any weapon that goes in weapon slot 2
+// SecondaryAmmo    - Ammo for the weapon currently in weapon slot 2
+// Defuser          - Defuse kit
+// Armor            - Kevlar, Kevlar+Helmet
+// HEGrenade        - HE Grenade
+// Flashbang        - Flashbang
+// SmokeGrenade     - Smoke Grenade
+// NightVision      - Nightvision goggles
 
 PrimaryWeapon
 PrimaryAmmo

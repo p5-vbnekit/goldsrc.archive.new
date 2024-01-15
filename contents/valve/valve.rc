@@ -1,5 +1,5 @@
 // load the base configuration
-//exec default.cfg
+// exec default.cfg
 
 s_refgain 0.4
 s_refdelay 4
@@ -21,4 +21,3 @@ exec autoexec.cfg
 // stuff command line statements
 //
 stuffcmds
-

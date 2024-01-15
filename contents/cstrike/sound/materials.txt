@@ -12,7 +12,7 @@
 //  'M' metal
 //  'V' ventillation
 //  'D' dirt
-//  'S' slosh liquid 
+//  'S' slosh liquid
 //  'T' tile
 //  'G' grate (Concrete is the default)
 //  'W' wood
@@ -64,9 +64,7 @@ W chair1_x4
 W planeseatsideba
 
 //-----------------------------------------------------------
-
 // itsItaly.wad
-
 //-----------------------------------------------------------
 D brickPath
 W 64crate0
@@ -103,7 +101,6 @@ D GravelGrass03
 D GravelGrass04
 D Grass01
 W Wood01
-
 
 //-----------------------------------------------------------
 // cs.wad
@@ -169,7 +166,6 @@ M cstrike_WE2Ribd
 //------------------------------------------------------------
 // chateau.wad
 //------------------------------------------------------------
-
 G {cxchana
 G {cxchanb
 M {cxcnstrctpoles
@@ -235,7 +231,6 @@ W cxwoodm
 //------------------------------------------------------------
 // de_piranesi.wad
 //------------------------------------------------------------
-
 M {pi_benchside
 W {pi_chairback
 M {pi_orrery01
@@ -307,7 +302,6 @@ W pi_woodceil
 //------------------------------------------------------------
 // de_airstrip.wad
 //------------------------------------------------------------
-
 W {ikcanopt
 W {ikcanopy
 W {ikcnp1
@@ -360,7 +354,6 @@ M ikmetla
 M ikmetlb
 M ikmetlc
 W ikvines
-
 
 //-----------------------------------------------------------
 // Valve's Textures
@@ -752,24 +745,9 @@ Y GLASSBLUE2
 Y GLASSGREEEN
 Y GLASSGREEEN
 
-
-
 //------------------------------------------------------------
 // cs_havana.wad
 //------------------------------------------------------------
-
-//  'M' metal
-//  'V' ventillation
-//  'D' dirt
-//  'S' slosh liquid 
-//  'T' tile
-//  'G' grate (Concrete is the default)
-//  'W' wood
-//  'P' computer
-//  'Y' glass
-//  'N' snow
-
-
 D cubed
 N cubrusha
 M cudumpsterc
@@ -783,5 +761,3 @@ T cuiflrf
 M custovetop
 M cutrashb
 W cuwoodm
-
-
