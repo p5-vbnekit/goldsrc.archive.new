@@ -2,15 +2,15 @@
 // 640x480 text scheme file
 //
 // Resolutions:
-// 	320
-//	400
-//	512
-//	640
-//	800
-//	1024
-//	1152
-//	1280
-//	1600
+//  320
+//  400
+//  512
+//  640
+//  800
+//  1024
+//  1152
+//  1280
+//  1600
 //
 
 // SchemeName defines a new scheme
@@ -36,7 +36,6 @@ BgColorArmed     = "0 0 0 0"
 BgColorMousedown = "0 0 0 0"
 
 ///////////////////// TFC FONTS /////////////////////
-
 
 // DEFAULT BUTTON TEXT
 SchemeName = "Primary Button Text"
@@ -89,6 +88,3 @@ SchemeName = "Team Info Text"
 FontName = "Arial"
 FontSize = 14
 FontWeight = 0
-
-
-

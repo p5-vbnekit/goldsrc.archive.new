@@ -184,6 +184,8 @@ def test_vdf(subtests, module_context):
         return _collector
 
     def _load(content, upstream: bool):
+        _path = content.path
+
         if content.path.lower().endswith(".txt"):
             _encoding = content.encoding
             content = content.read(decode = False, upstream = upstream)
@@ -199,6 +201,11 @@ def test_vdf(subtests, module_context):
             content = vdf.loads(_make_dry(content = content.read(
                 decode = True, upstream = upstream
             ), brutal = False))
+
+        if _path in {
+            "valve/spectcammenu.txt",
+            "cstrike/spectcammenu.txt"
+        }: content = _sort(content = content)
 
         return content
 
@@ -223,15 +230,18 @@ def test_endings(subtests, module_context):
 
     for _content in module_context.files:
         with subtests.test(path = _content.path):
-            _allow_empty_ending = True
             for _data in _content.read(
                 decode = True, upstream = False
-            ).splitlines(keepends = True):
-                _ending = _make_ending(value = _data)
-                if _ending:
-                    assert _ending in _valid
-                    continue
-                assert _allow_empty_ending
-                _allow_empty_ending = False
+            ).splitlines(keepends = True): assert _make_ending(value = _data) in _valid
             else: continue
             assert _data.rstrip(), "trailing empty lines"
+
+
+def test_spaces(subtests, module_context):
+    for _content in module_context.files:
+        with subtests.test(path = _content.path):
+            for _data in _content.read(
+                decode = True, upstream = False
+            ).splitlines(keepends = False):
+                assert "\t" not in _data, "tabs"
+                assert _data.rstrip() == _data, "trailing spaces"

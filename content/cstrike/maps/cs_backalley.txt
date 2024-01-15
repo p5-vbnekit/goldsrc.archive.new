@@ -1,10 +1,10 @@
 Alleyway - Hostage Rescue
 by TYR (tyr@barking-dog.com)
 
-Counter-Terrorists: 
-Infiltrate Terrorist stronghold and escort 
-the hostages to the rescue zone. Take out 
-the Terrorists without jeopardizing the 
+Counter-Terrorists:
+Infiltrate Terrorist stronghold and escort
+the hostages to the rescue zone. Take out
+the Terrorists without jeopardizing the
 hostages.
 
 Terrorists:

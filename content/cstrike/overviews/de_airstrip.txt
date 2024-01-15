@@ -1,14 +1,14 @@
 // overview description file for de_airstrip.bsp
 
-global 
+global
 {
-	ZOOM	1.24
-	ORIGIN	-1106	-386	-192
-	ROTATED	0
+    ZOOM    1.24
+    ORIGIN  -1106 -386 -192
+    ROTATED 0
 }
 
-layer 
+layer
 {
-	IMAGE	"overviews/de_airstrip.bmp"
-	HEIGHT	-192
+    IMAGE   "overviews/de_airstrip.bmp"
+    HEIGHT  -192
 }
